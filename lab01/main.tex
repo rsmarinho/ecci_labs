@@ -1,0 +1,112 @@
+\documentclass[10pt,addpoints]{exam}% 
+
+%%% Add decimal points
+% \usepackage{fp}
+% \usepackage{numprint}
+% \npdecimalsign{.}
+% \nprounddigits{1}
+
+% \usepackage{etoolbox}
+% \makeatletter
+% % points printed at each question
+% \patchcmd{\point@block}{\@points}{\FPdiv\pointdiv{\@points}{10}\numprint{\pointdiv}}{}{}
+
+% % points printed for each question in grade table
+% \patchcmd{\do@oneline@v}{\pointsof@index{pq@index}}{\FPdiv\pointsdiv{\pointsof@index{pq@index}}{10}\numprint{\pointsdiv}}{}{}
+
+% % total number of points in grade table
+% \patchcmd{\prt@tablepoints}{\prt@hlfcntr{tbl@points}}{\FPdiv\pointsdiv{\prt@hlfcntr{tbl@points}}{10}\numprint{\pointsdiv}}{}{}
+
+% % patching needed in many other places
+% \makeatother
+%%% --- %%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[brazilian]{babel}
+
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage[
+			paper=a4paper,
+%			showframe,
+			includeheadfoot,
+			top=2cm, 
+			bottom=2cm, 
+			left=2cm,
+			right=2cm,
+			footskip=0cm
+			]{geometry}
+			
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{newfloat}
+\usepackage{tikz}
+\usepackage{overpic}
+\usepackage{float}
+% \usepackage{subfig}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{tcolorbox}
+\usepackage{gensymb}
+\usepackage{circuitikz}
+
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+% Configuração do cabeçalho
+\newcommand{\class}{ECCI - 1707023}
+\newcommand{\term}{Engenharia Elétrica - 2018.2}
+\newcommand{\examnum}{Lab 01 - Simulação DC e parâmetros do transistor}
+\newcommand{\timelimit}{2h}
+\newcommand{\examdate}{}
+\pagestyle{head}
+\firstpageheader{CEAR - UFPB}{}{DEE}
+\runningheader{\class}{\examnum\ - Página \thepage\ de \numpages}{\examdate}
+\runningheadrule
+
+% Configuração da tabela de classificação
+\pointpoints{ponto}{pontos}
+\renewcommand{\solutiontitle}{\noindent\textbf{Solução: }}
+\hpword{Pontos:}
+\vpword{Pontos}
+\vtword{Total:}
+\htword{Total}
+\vsword{Resultado}
+\hsword{Resultado:}
+\vqword{Questão}
+\hqword{Questão:}
+
+\renewcommand*\half{.5}
+% \renewcommand{\thefigure}{} % set caption label style to 1.A
+% \renewcommand{\thesubfigure}{Circuito \arabic{subfigure}}
+% \captionsetup[subfigure]{labelformat=simple, labelsep=period}
+\setlength{\parskip}{\baselineskip}%
+
+\pgfplotsset{compat=1.15} 
+\begin{document}
+% Definição do cabeçalho
+\noindent
+\begin{minipage}[c]{0.7\linewidth}
+\includegraphics[scale=0.14]{logo/logo-ufpb.jpg}~~~~~\includegraphics[scale=2]{logo/logo-cear.png}\\[6pt]
+{\large \class}\\[4pt]
+{\examnum}\\[4pt]
+Professor: {\emph{Rafael Marinho}}\\[4pt]
+\textbf{Data: \examdate}\\[10pt]
+\noindent\makebox[0.7in][l]{\textbf{Nome: }}\makebox[3in]{\hrulefill}\\[10pt]
+\noindent\makebox[0.7in][l]{\textbf{Matrícula: }}\makebox[3in]{\hrulefill}\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}
+% \gradetable[v][questions]
+\end{minipage}
+\noindent
+\rule{\textwidth}{1pt}\vspace{10pt}
+\input{questions.tex}
+% -
+\vfill
+% \flushright{Boa prova!}
+\end{document}
