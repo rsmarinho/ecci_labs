@@ -1,0 +1,58 @@
+% \hspace{10pt}
+O segundo laboratório é referente à síntese de amplificadores. Nesse laboratório você deverá utilizar seus conhecimentos obtidos em sala de aula para criar um amplificadores. Para isso, você deverá utilizar apenas os transistores CMOS de de dois e de três volts (npn2v, pnp2v e npn3v, pnp3v). As especificações do amplificador estão descritas nos itens postaeriores.
+
+Crie uma nova biblioteca chamada {\em lab02}. Esta deve ser a biblioteca que contém as células que você utilizará nessa tarefa. Fique atento pois cada decisão (escolha) deve ser embasada tecnicamente.
+
+O objetivo desse laboratório é criar um amplificador de um estágio com o maior ganho alcançável e que utilize menor corrente que você conseguir. Para isso será preciso que você conheça os principais parâmetros do transistor, bem como suas faixas de operação e limitações.
+
+\noindent\hrulefill
+
+\noindent Dicas:
+\begin{enumerate}
+  \item Lembre que no primeiro laboratório nós aprendemos a visualizar e simular os parâmetros de operação do transistor. Agora, utilize as simulações que você aprendeu para fazer a escolha do melhor transistor.
+  \item Deixe um esquemático de simulação pronto para que você possa obter facilmente os parâmetros do transistor caso você necessite.
+  \item Utilize capacitores de \SI{1}{\micro\farad} na entrada e na saída do circuito para isolar a tensão dc dos terminais.
+  \item Todos os plots feitos devem ser anexados em folha suplementar.
+\end{enumerate}
+
+\noindent\hrulefill
+
+\noindent Parâmetros do amplificador:
+\begin{enumerate}
+  \item O amplificador deve utilizar a topologia emissor-comum
+  \item A corrente de dreno I\textsubscript{D} não deve ultrapassar \SI{4}{\milli\ampere}
+  \item A tensão de polarização DC máxima disponível para o circuito é de 3 V. Faça bom proveito. Pontos importantes são acumulados caso você utilize polarização com V\textsubscript{DD}$\leq$3 V
+  \item A polarização do circuito deve ser feita utilizando restistores (sem redes de polarização complexas, por enquanto). Você deve colocar um divisor de tensão no terminal de porta do transistor para polarizá-lo em tensão.
+  \item No terminal de source você pode ou não colocar uma resistência de degeneração. À partir de agora tudo é escolha de projeto.
+\end{enumerate}
+
+\newpage
+%%% -- Questão 01 - 6.24
+\begin{questions}
+\question Primeiramente você deve fazer uma escolha inteligente (\em educated choice) de qual transistor utilizar. Responda às seguintes perguntas sobre seu transistor escolhido
+\begin{parts}
+\part Qual o transistor escolhido? Justifique sua escolha
+\part Qual a tensão V\textsubscript{TH} do transitor?
+\part Plote o gráfico de curvas características do transitor e escolha o ponto de operação. Justifique sua escolha.
+\part Faça a escolha dos resistores de polarização para que o transitor opere na região escolhida
+\part Você utilizou resistor de degeneração? Porquê? Justifique.
+\begin{EnvFullwidth}
+\makeemptybox{8in}
+\end{EnvFullwidth}
+\end{parts}
+\newpage
+
+\question Sobre o circuito amplificador projetado, responda:
+\begin{parts}
+\part Qual o ganho de tensão do seu circuito?
+\part quais as impedâncias de entrada e saída do circuito?
+\part Execute uma análise transiente com um sinal senoidal $s(t)=V_p\sin(2\pi1000t)$ e plote o resultado para vários valores de tensão de pico $V_p$. O sinal na porta de saída do circuito é apenas uma modificação linear do sinal aplicado à entrada? O que acontece? Explique.
+\begin{EnvFullwidth}
+\makeemptybox{8in}
+\end{EnvFullwidth}
+\end{parts}
+
+
+\end{questions}
+
+%colocar um item para encontrar o valor aproximado de uncox por uma simulação DC de polarização.
